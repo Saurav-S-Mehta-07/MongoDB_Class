@@ -17,19 +17,20 @@ const bookSchema = new mongoose.Schema({
     },
     price : {
         type : Number,
-        required : true
+        required : true,
+        min : [1, "Price is too low for amozon selling"]
     }
 });
 
 let Book = mongoose.model("Book",bookSchema);
 
 let book1 = new Book({
-    title:"maths",
+    title:"science",
     author:"Saurav",
-    price:20
+    price:-12
 });
 
 book1.save().then((res)=>{
     console.log(res);
-}).catch(err=>console.log(err));
+}).catch(err=>console.log(err.errors.price.properties.message));
 
