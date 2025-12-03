@@ -23,4 +23,13 @@ const bookSchema = new mongoose.Schema({
 
 let Book = mongoose.model("Book",bookSchema);
 
+let book1 = new Book({
+    title:"maths",
+    author:"Saurav",
+    price:20
+});
+
+book1.save().then((res)=>{
+    console.log(res);
+}).catch(err=>console.log(err));
 
