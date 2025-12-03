@@ -14,13 +14,18 @@
     <hr>
     <% for(chat of chats) {%>
         <div class="card">
-            <form action="/chats" method="delete" class="dlt-btn-form">
-                 <button>delete</button>
-            </form>
+            <div class="edit-dlt-form">
+                <form action="/chats/<%=chat._id%>/edit" method="get" class="edit-btn-form">
+                 <button>edit</button>
+                </form>
+                <form action="/chats/<%=chat._id%>?_method=delete" method="post" class="dlt-btn-form">
+                     <button>delete</button>
+                </form>
+            </div>
             <h2>From : <i>@<%=chat.from%></i></h2>
             <h2>To : <i>@<%=chat.to%></i></h2>
             <h2 id="msg">message : <%=chat.message%></h2>
-            <p></p>
+            <p><%=chat.created_at.toString().split(" ").slice(0,5).join(" ")%></p>
         </div>
         <hr>
     <%}%>

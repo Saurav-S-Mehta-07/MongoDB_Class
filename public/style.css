@@ -18,17 +18,35 @@ h1{
     border-radius: 50%;
     background-color: lightgreen;
 }
+.btn:hover{
+    background-color: aliceblue;
+    border:3px solid lightgreen;
+    transform: scale(0.98);
+}
 
 #msg{
     background-color: aliceblue;
 }
 
-.dlt-btn-form{
-    text-align: end;
-}
 .dlt-btn-form button{
     background-color: lightcoral;
+    border: 2px solid lightcoral;
     border: none;
     border-radius: 5px;
     padding: 10px;
+    margin-left: 10px;
+}
+
+.edit-btn-form button{
+    background-color: lightskyblue;
+    border: 2px solid lightskyblue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.edit-dlt-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
