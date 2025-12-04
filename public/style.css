@@ -1,6 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+}
+
 .card{
     background-color: lightgreen;
-    margin: 5px;
+    margin: 15px;
     width: 50%;
     padding: 15px;
     border-radius: 20px;
@@ -49,4 +66,59 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: end;
+}
+
+.dlt-card{
+    background-color: lightskyblue;
+    border: 2px solid lightslategrey;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    width: 20%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.blur{
+    opacity: 0.5;
+}
+
+.confirm-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-card {
+    background-color: lightgreen;
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 5px 5px 15px green;
+    text-align: center;
+}
+
+.popup-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-buttons button {
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
 }
