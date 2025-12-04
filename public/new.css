@@ -1,0 +1,31 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: green;
+}
+
+input,textarea{
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+label{
+    color: green;
+    font-size: large;
+}
+
+button{
+    font-size: larger;
+    border-radius: 12px;
+    border: 2px solid blue;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+button:hover{
+    border: 2px solid green;
+    background-color: lightgreen;
+}
